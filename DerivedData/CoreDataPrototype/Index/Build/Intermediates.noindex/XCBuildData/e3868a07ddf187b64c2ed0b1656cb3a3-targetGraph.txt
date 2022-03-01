@@ -1,0 +1,3 @@
+Target dependency graph (2 targets)
+CoreDataPrototype in CoreDataPrototype, no dependencies
+CoreDataPrototype in CoreDataPrototype, no dependencies

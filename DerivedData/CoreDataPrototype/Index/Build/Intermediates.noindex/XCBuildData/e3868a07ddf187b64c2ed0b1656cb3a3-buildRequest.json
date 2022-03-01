@@ -1,0 +1,61 @@
+{
+  "_buildCommand2" : {
+    "command" : "prepareForIndexing",
+    "enableIndexBuildArena" : true,
+    "targets" : null
+  },
+  "buildCommand" : "build",
+  "configuredTargets" : [
+    {
+      "guid" : "d2e45384a0ac6cb38cb9f5237874e60efb7af21d73d3f6f01e27d74f24350081"
+    }
+  ],
+  "containerPath" : "/Users/joshuarogers/Desktop/MMP/MealPlanner/Prototypes/CoreDataPrototype/CoreDataPrototype.xcodeproj",
+  "continueBuildingAfterErrors" : true,
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "indexbuild",
+    "activeArchitecture" : "arm64e",
+    "activeRunDestination" : {
+      "disableOnlyActiveArch" : false,
+      "platform" : "macosx",
+      "sdk" : "macosx12.1",
+      "sdkVariant" : "macos",
+      "supportedArchitectures" : [
+        "arm64e",
+        "arm64",
+        "x86_64"
+      ],
+      "targetArchitecture" : "arm64e"
+    },
+    "arenaInfo" : {
+      "buildIntermediatesPath" : "/Users/joshuarogers/Desktop/MMP/MealPlanner/Prototypes/CoreDataPrototype/DerivedData/CoreDataPrototype/Index/Build/Intermediates.noindex",
+      "buildProductsPath" : "/Users/joshuarogers/Desktop/MMP/MealPlanner/Prototypes/CoreDataPrototype/DerivedData/CoreDataPrototype/Index/Build/Products",
+      "derivedDataPath" : "/Users/joshuarogers/Desktop/MMP/MealPlanner/Prototypes/CoreDataPrototype/DerivedData",
+      "indexDataStoreFolderPath" : "/Users/joshuarogers/Desktop/MMP/MealPlanner/Prototypes/CoreDataPrototype/DerivedData/CoreDataPrototype/Index/DataStore",
+      "indexEnableDataStore" : true,
+      "indexPCHPath" : "/Users/joshuarogers/Desktop/MMP/MealPlanner/Prototypes/CoreDataPrototype/DerivedData/CoreDataPrototype/Index/PrecompiledHeaders",
+      "pchPath" : "/Users/joshuarogers/Desktop/MMP/MealPlanner/Prototypes/CoreDataPrototype/DerivedData/CoreDataPrototype/Index/Build/Intermediates.noindex/PrecompiledHeaders"
+    },
+    "configurationName" : "Debug",
+    "overrides" : {
+      "synthesized" : {
+        "table" : {
+          "ENABLE_PREVIEWS" : "NO",
+          "INDEX_ARENA_INFO_REGULAR_BUILD_PRODUCTS_DIR" : "/Users/joshuarogers/Desktop/MMP/MealPlanner/Prototypes/CoreDataPrototype/DerivedData/CoreDataPrototype/Build/Products",
+          "ONLY_ACTIVE_ARCH" : "YES"
+        }
+      }
+    }
+  },
+  "qos" : "default",
+  "schemeCommand" : "launch",
+  "schemeCommand2" : "launch",
+  "shouldCollectMetrics" : false,
+  "showNonLoggedProgress" : true,
+  "useDryRun" : false,
+  "useImplicitDependencies" : true,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : true
+}
