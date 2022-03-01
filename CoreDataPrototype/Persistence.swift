@@ -2,39 +2,53 @@
 //  Persistence.swift
 //  CoreDataPrototype
 //
+//  Load and manage the Core Data configuration
+//
 //  Created by Joshua Rogers on 01/03/2022.
 //
 
 import CoreData
 
 struct PersistenceController {
+    // A singleton for our entire app to use
     static let shared = PersistenceController()
+    
+    // Storage for Core Data
+    let container: NSPersistentContainer
 
+    // A test configuration for SwiftUI previews
     static var preview: PersistenceController = {
+        
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
-        for _ in 0..<10 {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
-        }
+        
+        let newProduct = Product(context: viewContext)
+        newProduct.ean = "9999999999999"
+        newProduct.name = "Coca-Cola 1.5l"
+        
         do {
             try viewContext.save()
+            
         } catch {
             // Replace this implementation with code to handle the error appropriately.
             // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
             let nsError = error as NSError
             fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
         }
+        
         return result
     }()
 
-    let container: NSPersistentContainer
-
+    // An initializer to load Core Data, optionally able
+    // to use an in-memory store.
     init(inMemory: Bool = false) {
+        
         container = NSPersistentContainer(name: "CoreDataPrototype")
+        
         if inMemory {
             container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
         }
+        
         container.viewContext.automaticallyMergesChangesFromParent = true
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
@@ -52,5 +66,17 @@ struct PersistenceController {
                 fatalError("Unresolved error \(error), \(error.userInfo)")
             }
         })
+    }
+    
+    func save() {
+        let context = container.viewContext
+
+        if context.hasChanges {
+            do {
+                try context.save()
+            } catch {
+                // Show some error here
+            }
+        }
     }
 }
